@@ -7,7 +7,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
         data.forEach(element => {            
             photoContainer.innerHTML += 
             `
-                <div class="polaroid col-8 col-md-5 col-xl-3 bg-light p-3 position-relative card-shadow">
+                <div id=${element.id} class="polaroid col-8 col-md-5 col-xl-3 bg-light p-3 position-relative card-shadow">
                     <img class="pin position-absolute start-50 translate-middle-x" src="./img/pin.svg">
                     <figure class="w-100">
                         <img class="w-100" src=${element.url} alt=${element.title}>
@@ -20,9 +20,16 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
                 </div>
             `
         });
+        const polaroids = document.querySelectorAll(".polaroid");
+
+        polaroids.forEach(element => {
+            element.addEventListener("click", function() {
+                console.log("Ciao")
+            })
+        })
     })
     .catch(error => {
         console.error(error)
     })
 
-
+  
