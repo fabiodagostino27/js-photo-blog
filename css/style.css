@@ -29,3 +29,9 @@ header > h1 {
 main {
     background-image: url(../img/cork.png);
 }
+
+main .pin {
+    width: 25px;
+    top: -1%;
+    z-index: 1;
+}
