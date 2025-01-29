@@ -1,0 +1,25 @@
+/*font-family: "Edu TAS Beginner", serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap');
+
+/*font-family: "Sometype Mono", serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+/*FONTS*/
+.font-titles {
+    font-family: "Edu TAS Beginner", serif;
+}
+
+.font-dates {
+    font-family: "Sometype Mono", serif;
+}
+
+
+/*HEADER*/
+header {
+    background-image: url(../img/wall.png);
+}
+
+header > h1 {
+    font-size: 60px;
+}
