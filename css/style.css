@@ -47,6 +47,7 @@ main .pin {
 .polaroid:hover {
     transform: rotate(20deg);
     z-index: 2;
+    cursor: pointer;
 }
 
 .polaroid:hover .pin {
