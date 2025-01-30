@@ -52,3 +52,8 @@ main .pin {
 .polaroid:hover .pin {
     display: none;
 }
+
+#modal {
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.514);
+}

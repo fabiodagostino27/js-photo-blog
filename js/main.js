@@ -1,4 +1,6 @@
 const photoContainer = document.getElementById("photo-container");
+const modal = document.getElementById("modal");
+const modalImg = document.querySelector("#modal img")
 
 fetch("https://lanciweb.github.io/demo/api/pictures/")
     .then(response => response.json())
@@ -14,8 +16,8 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
                     </figure>
 
                     <div>
-                        <h4 class="font-titles m-0">${element.title}</h4>
                         <span class="font-dates">${element.date}</span>
+                        <h4 class="font-titles text-uppercase fw-bold m-0">${element.title}</h4>
                     </div>
                 </div>
             `
@@ -24,7 +26,8 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
 
         polaroids.forEach(element => {
             element.addEventListener("click", function() {
-                console.log("Ciao")
+                modal.classList.replace("d-none", "d-flex");
+                modalImg.setAttribute("src", `https://marcolanci.it/boolean/assets/pictures/${element.id}.png`)
             })
         })
     })
